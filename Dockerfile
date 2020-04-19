@@ -8,7 +8,7 @@ RUN cd  nginx-1.17.9 && ./configure \
     --with-cc-opt="-O3 -static -static-libgcc" \
     --with-ld-opt="-static" \
     --prefix=/opt/nginx \
-    --with-http_auth_request_module \
+    --with-http_auth_request_module --with-stream \
     --without-http_gzip_module \
     --add-module=/ngx_brotli && \
     make && make install
